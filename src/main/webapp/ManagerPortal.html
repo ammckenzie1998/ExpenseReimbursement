@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style href="http://localhost:8080/ExpenseReimbursementSystem/style.css" rel="stylesheet"></style>
+    <title>ERS Employee Portal</title>
+    <script src="http://localhost:8080/ExpenseReimbursementSystem/portal-ajax.js"></script>
+</head>
+<body class="container bg-dark text-white">
+    <div class="bg-info bg-gradient container" id="page-head">
+        <div class="container" id="welcome-message">
+            <h3>Welcome to the manager portal!</h3>
+        </div>
+
+        <div class="container" id="options-menu">
+            <button class="btn btn-secondary" type="button" id="view-tickets">View My Tickets</button>
+            <button class="btn btn-secondary" type="button" id="submit-ticket">Submit Ticket</button>
+            <button class="btn btn-primary" type="button" id="view-all-tickets">View All Tickets</button>
+            <button class="btn btn-danger" type="button" id="logout">Logout</button>
+        </div>
+    </div>
+
+    <div class="container bg-gradient" id="ticket-form-block" style="display: none">
+        <form id="ticket-form">
+            <label for="ticket-type">Expense Type</label>
+            <select id="ticket-type" class="form-control">
+                <option value="FOOD">FOOD</option>
+                <option value="TRAVEL">TRAVEL</option>
+                <option value="LODGING">LODGING</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+            <label for="ticket-amount">Amount (USD)</label>
+            <input type="text" id="ticket-amount" placeholder="0.00" class="form-control">
+            <label for="ticket-description">Description</label>
+            <input type="text" id="ticket-description" placeholder="None" class="form-control">
+            <input type="button" id="ticket-form-submit" value="Submit" class="form-control btn btn-info">
+            <input type="button" id="ticket-form-cancel" value="Cancel" class="form-control btn btn-secondary">
+        </form>
+    </div>
+
+    <div class="container bg-gradient bg-dark" id="main-display">
+        <div id="ticket-table"><table class="table table-dark table-striped table-hover table-responsive"></table></div>
+    </div>
+</body>
+</html>

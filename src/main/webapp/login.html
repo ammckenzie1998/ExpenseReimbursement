@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+	<title>ERS Login</title>
+</head>
+<body class="container bg-dark text-white">
+
+	<div class="container">
+		<h3>ERS Login</h3>
+		<span class="label label-success">Please log in below:</span>
+	</div>
+	
+	<div class="container">
+		<form method ="POST" action = "http://localhost:8080/ExpenseReimbursementSystem/m/login">
+			<input type="text" name="username" placeholder = "Username" class="form-control">
+			<input type="password" name="password" placeholder = "Password" class="form-control">
+			<input type = "submit" value="Login" class = "form-control btn btn-info">
+		</form>
+	</div>
+
+</body>
+</html>
